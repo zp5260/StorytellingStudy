@@ -1,6 +1,6 @@
 #$ paths of data
-datadirpythoncsv = r"{./logfiles/VP 1 Tapping-PROMS (Rhythm before Tempo Subtest).csv}"
-datadirInquisitxlsx = r"{./logfiles/sdff}"
+datadirpythoncsv = r"{./logfiles/}"
+datadirInquisitxlsx = r"{./bla/}"
 datadirInquisitiqdat = r"{C:\Users\PJ\OneDrive - rwth-aachen.de\HIWI\Markus\example output\Inquisit\iqdat}"
 
 #$ packages required
@@ -80,7 +80,8 @@ analyze = function(allresults) {
     }
   }
   
-  rhythmtemp = temp[temp$block == "rhythm" & temp$skip != TRUE, ]
+  rhythmtemp = temp[temp$block == "ritem" & temp$skip != TRUE, ]
+  tempotemp = temp[temp$block == "tempo" & temp$skip != TRUE, ]
   
   for (soundname in unique(rhythmtemp[["sound"]])) {
     norm = allnorms[[soundname]]
@@ -91,6 +92,11 @@ analyze = function(allresults) {
     }
   }
   
+  for (soundname in unique(tempotemp[["sound"]])) {
+    norm = allnorms[[soundname]]
+    tempotemp[tempotemp$sound == soundname, "norm"] = norm[1]
+  }
+  
   rhythmtemp %<>%
     group_by(sound, norm) %>%
     mutate(iqr = IQR(RT),
@@ -99,21 +105,10 @@ analyze = function(allresults) {
     ungroup() %>%
     mutate(outlier = (RT < q1 -  3 * iqr) |
              (RT >  q3 + 3 * iqr)) %>%
-    select(c(
-      "RT",
-      "skip",
-      "norm",
-      "iqr",
-      "q1",
-      "q3",
-      "outlier",
-      "sbj",
-      "sound",
-      "press order"
-    ))
+    select(c("RT","skip","norm","iqr","q1","q3","outlier","sbj","sound","press order"))
   
   # identify outliers for tempo
-  tempotemp = temp[temp$block == "tempo" & temp$skip != TRUE, ] %>%
+  tempotemp %<>%
     group_by(sound) %>%
     mutate(iqr = IQR(RT),
            q1 = quantile(RT, 1 / 4),
@@ -121,18 +116,7 @@ analyze = function(allresults) {
     ungroup() %>%
     mutate(outlier = (RT < q1 -  3 * iqr) |
              (RT >  q3 + 3 * iqr)) %>%
-    select(c(
-      "RT",
-      "skip",
-      "norm",
-      "iqr",
-      "q1",
-      "q3",
-      "outlier",
-      "sbj",
-      "sound",
-      "press order"
-    ))
+    select(c("RT","skip","norm","iqr","q1","q3","outlier","sbj","sound","press order"))
   
   temp = bind_rows (rhythmtemp, tempotemp)
   
@@ -160,7 +144,7 @@ analyze = function(allresults) {
           RTveccumulative = onetrial[["accumulated RT"]]  %>%
             .[2:(length(.) - 1)] # drop the first and the last RT for current sound
           
-          if (blockname == "rhythm") {
+          if (blockname == "ritem") {
             ##| analyze rhythm
             
             if (exclude) {
@@ -347,7 +331,7 @@ reformatInquisit =  function(allresults) {
         "testing"
       ),
       block = case_when(
-        grepl("Rhythm", tempstring, ignore.case = T) ~ "rhythm",
+        grepl("Rhythm", tempstring, ignore.case = T) ~ "ritem",
         grepl("Tempo", tempstring, ignore.case = T) ~ "tempo"
       ) ,
       'press order' = row_number()
