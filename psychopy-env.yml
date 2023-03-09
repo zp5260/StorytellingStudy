@@ -1,0 +1,13 @@
+name: psychopy
+channels:
+- conda-forge
+dependencies:
+- python=3.8
+- psychopy
+- pip
+- pip:
+  - psychtoolbox
+  - pygame
+  - pyo
+  - pyparallel
+  - websocket_client

@@ -1,0 +1,389 @@
+﻿<surveypage surveypagename>
+/ questions = [1=q1]
+</surveypage>
+
+<textbox q1>
+/ caption="Please enter the participant ID:"
+</textbox>
+
+<trial instruction>
+/ stimulusframes = [1=rhythminstruc]
+/ isvalidresponse = [28]
+</trial>
+
+<text rhythminstruc>
+/ items = ("TEMPO TAPPING TEST
+ 
+Press any key to listen to the first practice tempo.")
+</text>
+
+<values>
+/ nbeats = 0
+/ tapcount = 0
+/ t_previoustap = 0
+/ t_currenttap = 0
+/ tapinterval = 0
+/ current_nominal = 0
+/ current_reproduced = 0
+/ current_difference = 0
+/ all_nominal = ""
+/ all_reproduced = ""
+/ all_differences = ""
+</values>
+
+<block myblock>
+/ trials = [1=surveypagename; 1=instruction; 1-21=listen]
+</block>
+
+<trial listen>
+/ ontrialbegin = [values.nbeats = 0; values.tapcount = 0;
+    values.t_previoustap = 0; values.t_currenttap = 0; values.tapinterval = 0;
+    values.current_nominal = 0; values.current_reproduced = 0;
+values.current_difference = 0;
+    values.all_nominal = ""; values.all_reproduced = "";
+values.all_differences = ""; ]
+/ ontrialend = [values.nbeats = list.nbeats.nextvalue;]
+/ stimulusframes = [1=rhythmitems, fixation; 950=systembeep]
+/ validresponse = (0)
+/ trialduration = 1000
+/ branch = [trial.tap]
+</trial>
+
+<trial tap>
+/ ontrialbegin = [if (values.tapcount > 0) values.current_nominal =
+list.nominal_intervals.nextvalue;]
+/ ontrialbegin = [values.t_previoustap = values.t_currenttap; ]
+/ ontrialend = [values.tapcount += 1]
+/ ontrialend = [values.tapinterval = abs(values.t_currenttap -
+values.t_previoustap)]
+/ ontrialend = [values.current_difference = values.tapinterval -
+values.current_nominal]
+/ ontrialend = [if (values.tapcount > 1) {values.all_reproduced =
+concat(concat(values.all_reproduced, "|"), values.tapinterval);
+    values.all_nominal = concat(concat(values.all_nominal, "|"),
+values.current_nominal);
+    values.all_differences = concat(concat(values.all_differences,
+"|"), values.current_difference);}
+    ]
+/ stimulusframes = [1=rhythm]
+/ isvalidresponse = [values.t_currenttap = script.elapsedtime;
+trial.tap.response == 57 || trial.tap.response == 28]
+/ branch = [if(trial.tap.response == 28) notrial]
+/ branch = [if (values.tapcount < values.nbeats) trial.tap]
+</trial>
+
+<text rhythm>
+/ items = rhythmitems
+/ select = sound.rhythmitems.currentindex
+/ erase = false
+</text>
+
+<text finishbutton>
+/ items = ("Fertig")
+/ erase = false
+/ position = (80%, 90%)
+</text>
+
+<text fixation>
+/ items = ("You hear the tempo twice.
+
+Please reproduce the tempo (one time) AFTER the BEEP TONE.")
+/ size = (100%, 100%)
+/ erase = false
+/vjustify = center
+</text>
+
+<item rhythmitems>
+/ 1 = "Practice Tempo 1 of 3 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 2 = "Practice Tempo 2 of 3 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 3 = "Practice Tempo 3 of 3 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 4 = "Tempo 1 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 5 = "Tempo 2 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 6 = "Tempo 3 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 7 = "Tempo 4 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 8 = "Tempo 5 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 9 = "Tempo 6 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 10 = "Tempo 7 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 11 = "Tempo 8 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 12 = "Tempo 9 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 13 = "Tempo 10 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 14 = "Tempo 11 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 15 = "Tempo 12 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 16 = "Tempo 13 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 17 = "Tempo 14 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 18 = "Tempo 15 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 19 = "Tempo 16 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 20 = "Tempo 17 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To continue with the next rhythm please press ENTER and wait for the BEEP TONE to start reproducing."
+/ 21 = "Tempo 18 of 18 + its Repetition have been played.
+
+Please reproduce the tempo now (8 taps with spacebar).
+
+
+
+To finish the tempo tapping test please press ENTER."
+</item>
+
+<sound rhythmitems>
+/ items = ("TE_exampleI_129bpm_tapping.wav", "TE_exampleII_116bpm_tapping.wav", "TE_exampleIII_121bpm_tapping.wav", "T1_tapping.wav", "T2_tapping.wav", "T3_tapping.wav", "T4_tapping.wav", "T5_tapping.wav", "T6_tapping.wav", "T7_tapping.wav", "T8_tapping.wav", "T9_tapping.wav", "T10_tapping.wav", "T11_tapping.wav", "T12_tapping.wav", "T13_tapping.wav", "T14_tapping.wav", "T15_tapping.wav", "T16_tapping.wav", "T17_tapping.wav", "T18_tapping.wav")
+/ playthrough = true
+/ select = sequence
+</sound>
+
+// holds the number of beats associated with the displayed rhythm (here +20 cause of break between the items)
+<list nbeats>
+/ items = (28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28)
+/ selectionmode = sound.rhythmitems.currentindex
+</list>
+
+// list of lists holding the nominal intervals associated with the
+displayed rhythm
+<list nominal_intervals>
+/ items = (list.tI_intervals.nextvalue, list.tII_intervals.nextvalue, list.tIII_intervals.nextvalue, list.r1_intervals.nextvalue, list.r2_intervals.nextvalue, list.r3_intervals.nextvalue, list.r4_intervals.nextvalue, list.r5_intervals.nextvalue, list.r6_intervals.nextvalue, list.r7_intervals.nextvalue, list.r8_intervals.nextvalue, list.r9_intervals.nextvalue, list.r10_intervals.nextvalue, list.r11_intervals.nextvalue, list.r12_intervals.nextvalue, list.r13_intervals.nextvalue, list.r14_intervals.nextvalue, list.r15_intervals.nextvalue, list.r16_intervals.nextvalue, list.r17_intervals.nextvalue, list.r18_intervals.nextvalue)
+/ selectionmode = sound.rhythmitems.currentindex
+</list>
+
+// intervals associated with rhythm1
+<list tI_intervals>
+/ items = (465,465,465,465,465,465,465)
+/ selectionmode = sequence
+</list>
+
+// intervals associated with rhythm1
+<list tII_intervals>
+/ items = (517,517,517,517,517,517,517)
+/ selectionmode = sequence
+</list>
+
+// intervals associated with rhythm1
+<list tIII_intervals>
+/ items = (495,495,495,495,495,495,495)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhyrhm19
+<list r1_intervals>
+/ items = (588,588,588,588,588,588,588)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm20
+<list r2_intervals>
+/ items = (545,545,545,545,545,545,545)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm21
+<list r3_intervals>
+/ items = (550,550,550,550,550,550,550)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm22
+<list r4_intervals>
+/ items = (461,461,461,461,461,461,461)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm23
+<list r5_intervals>
+/ items = (524,524,524,524,524,524,524)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm24
+<list r6_intervals>
+/ items = (530,530,530,530,530,530,530)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm25
+<list r7_intervals>
+/ items = (512,512,512,512,512,512,512)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm26
+<list r8_intervals>
+/ items = (600,600,600,600,600,600,600)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm27
+<list r9_intervals>
+/ items = (500,500,500,500,500,500,500)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm28
+<list r10_intervals>
+/ items = (480,480,480,480,480,480,480)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm29
+<list r11_intervals>
+/ items = (468,468,468,468,468,468,468)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm30
+<list r12_intervals>
+/ items = (560,560,560,560,560,560,560)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm31
+<list r13_intervals>
+/ items = (540,540,540,540,540,540,540)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm32
+<list r14_intervals>
+/ items = (526,526,526,526,526,526,526)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm3
+<list r15_intervals>
+/ items = (533,533,533,533,533,533,533)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm34
+<list r16_intervals>
+/ items = (535,535,535,535,535,535,535)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm35
+<list r17_intervals>
+/ items = (528,528,528,528,528,528,528)
+/ selectionmode = sequence
+</list>
+
+//intervals associated with rhythm36
+<list r18_intervals>
+/ items = (520,520,520,520,520,520,520)
+/ selectionmode = sequence
+</list>
