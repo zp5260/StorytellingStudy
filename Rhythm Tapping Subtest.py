@@ -89,7 +89,7 @@ def trials(triallist, phase, block):
 oriprefs=prefs.hardware['audioLib']
 prefs.hardware['audioLib']=['pyo']
 prefs.hardware['audioLib']=oriprefs
-rhythmus_testing=[ "R1_easy_tapping.wav", "R2_easy_tapping.wav", "R3_medium_tapping.wav", "R4_medium_tapping.wav", "R5_easy_tapping.wav", "R6_complex_tapping.wav", "R7_medium_tapping.wav", "R8_complex_tapping.wav", "R9_easy_tapping.wav", "R10_easy_tapping.wav", "R11_complex_tapping.wav", "R12_medium_tapping.wav", "R13_medium_tapping.wav", "R14_medium_tapping.wav", "R15_complex_tapping.wav", "R16_complex_tapping.wav", "R17_easy_tapping.wav", "R18_complex_tapping.wav",]
+rhythmus_testing=[ "R_E1_tapping.wav", "R_ES1_tapping.wav", "R_M1_tapping.wav", "R_MS2_tapping.wav", "R5_easy_tapping.wav", "R_C2_tapping.wav", "R7_medium_tapping.wav", "R_CS1_tapping.wav", "R9_easy_tapping.wav", "R10_easy_tapping.wav", "R11_complex_tapping.wav", "R12_medium_tapping.wav", "R13_medium_tapping.wav", "R14_medium_tapping.wav", "R15_complex_tapping.wav", "R16_complex_tapping.wav", "R17_easy_tapping.wav", "R18_complex_tapping.wav",]
 rhythmus_training = ["R_exampleI_520260520260520130130520_tapping.wav", "R_exampleII_260520650130520260260260520_tapping.wav", "R_exampleIII_520650650520130390130520_tapping.wav", ]
 
 event.globalKeys.clear()

@@ -85,7 +85,7 @@ def trials(triallist, phase, block):
 oriprefs=prefs.hardware['audioLib']
 prefs.hardware['audioLib']=['pyo']
 prefs.hardware['audioLib']=oriprefs
-tempo_testing=["T1_tapping.wav", "T2_tapping.wav", "T3_tapping.wav", "T4_tapping.wav", "T5_tapping.wav", "T6_tapping.wav", "T7_tapping.wav", "T8_tapping.wav", "T9_tapping.wav", "T10_tapping.wav", "T11_tapping.wav", "T12_tapping.wav", "T13_tapping.wav", "T14_tapping.wav", "T15_tapping.wav", "T16_tapping.wav", "T17_tapping.wav", "T18_tapping.wav",]
+tempo_testing=["TE_MS2_tapping.wav", "TE_E1_tapping.wav", "TE_CS2_tapping.wav", "TE_ES1_tapping.wav", "TE_C1_tapping.wav", "TE_ES3_tapping.wav", "T7_tapping.wav", "T8_tapping.wav", "T9_tapping.wav", "T10_tapping.wav", "T11_tapping.wav", "T12_tapping.wav", "T13_tapping.wav", "T14_tapping.wav", "T15_tapping.wav", "T16_tapping.wav", "T17_tapping.wav", "T18_tapping.wav",]
 tempo_training = ["TE_exampleI_129bpm_tapping.wav", "TE_exampleII_116bpm_tapping.wav", "TE_exampleIII_121bpm_tapping.wav", ]
 
 event.globalKeys.clear()

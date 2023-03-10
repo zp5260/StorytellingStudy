@@ -41,7 +41,7 @@ def trials(triallist, phase, block):
     for trial in triallist:
         beep = sound.Sound(value=500, secs=0.10, volume=0.1)
         beep.stop()
-        if phase == 'tempo':
+        if block == 'tempo':
             text = f'Tempo {n} od {ntrials}. Zdaj se bodo predvajale ponovitve naloge iz tempa:'+'\n'+f'Prosim ponovi slišan tempo po  PREDVAJANEM GLASNEM TONU.'+'\n'+f'Pritisni gumb "B/b" za začetek naloge iz tempa.'+'\n'+"8 tapkov s presledkom ali spacebarom."+'\n\n'+\
                'Ko boš zaključil ponovitev naloge, pritisni gumb "ENTER" za nadaljevanje.'
         else:
@@ -93,8 +93,8 @@ def trials(triallist, phase, block):
 oriprefs=prefs.hardware['audioLib']
 prefs.hardware['audioLib']=['pyo']
 prefs.hardware['audioLib']=oriprefs
-rhythm_testing=["R1_easy_tapping.wav", "R3_medium_tapping.wav", "R4_medium_tapping.wav", "R8_complex_tapping.wav"]
-tempo_testing=["T1_tapping.wav", "T2_tapping.wav", "T3_tapping.wav", "T4_tapping.wav"]
+rhythm_testing=["R_E1_tapping.wav", "R_M1_tapping.wav", "R_MS2_tapping.wav", "R_CS1_tapping.wav"]
+tempo_testing=["TE_MS2_tapping.wav", "TE_E1_tapping.wav", "TE_CS2_tapping.wav", "TE_ES1_tapping.wav"]
 rhythm_training = ["R_exampleI_520260520260520130130520_tapping.wav"]
 tempo_training = ["TE_exampleI_129bpm_tapping.wav"]
 
