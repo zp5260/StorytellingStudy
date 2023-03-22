@@ -93,8 +93,8 @@ def trials(triallist, phase, block):
 oriprefs=prefs.hardware['audioLib']
 prefs.hardware['audioLib']=['pyo']
 prefs.hardware['audioLib']=oriprefs
-rhythm_testing=["R_E1_tapping.wav", "R_M1_tapping.wav", "R_MS2_tapping.wav", "R_CS1_tapping.wav"]
-tempo_testing=["TE_MS2_tapping.wav", "TE_E1_tapping.wav", "TE_CS2_tapping.wav", "TE_ES1_tapping.wav"]
+rhythm_testing=["R_E1_tapping.wav", "R_M1_tapping.wav", "R_MS2_tapping.wav"]
+tempo_testing=["TE_MS2_tapping.wav", "TE_E1_tapping.wav", "TE_CS2_tapping.wav"]
 rhythm_training = ["R_exampleI_520260520260520130130520_tapping.wav"]
 tempo_training = ["TE_exampleI_129bpm_tapping.wav"]
 
@@ -161,9 +161,9 @@ with open(file_path, 'w', buffering=1, encoding='utf-8') as log_file:
     instruction.present_text('instruction')
 
     instruction.present_text('Rhythm training')
-    trials(rhythm_training, 'vaje', 'ritem')
+    trials(rhythm_training, 'vaja', 'ritem')
     instruction.present_text('trained')
-    trials(rhythm_testing, 'eksperimenta', 'ritem')
+    trials(rhythm_testing, 'eksperiment', 'ritem')
 
     instruction.present_text('pause')
 

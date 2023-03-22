@@ -1,0 +1,80 @@
+sbj; age; sex; block; phase; trialnr; sound; press order; accumulated RT; press duration; key name
+1; 11; moški; ritem; vaje; 1; R_exampleI_520260520260520130130520_tapping.wav; 1; 0; 71; space
+1; 11; moški; ritem; vaje; 1; R_exampleI_520260520260520130130520_tapping.wav; 2; 440; 60; space
+1; 11; moški; ritem; vaje; 1; R_exampleI_520260520260520130130520_tapping.wav; 3; 667; 64; space
+1; 11; moški; ritem; vaje; 1; R_exampleI_520260520260520130130520_tapping.wav; 4; 1039; 80; space
+1; 11; moški; ritem; vaje; 1; R_exampleI_520260520260520130130520_tapping.wav; 5; 1680; 56; space
+1; 11; moški; ritem; vaje; 1; R_exampleI_520260520260520130130520_tapping.wav; 6; 1837; 60; space
+1; 11; moški; ritem; vaje; 1; R_exampleI_520260520260520130130520_tapping.wav; 7; 2007; 60; space
+1; 11; moški; ritem; vaje; 1; R_exampleI_520260520260520130130520_tapping.wav; 8; 2392; 68; space
+1; 11; moški; ritem; vaje; 1; R_exampleI_520260520260520130130520_tapping.wav; 9; 4859; 44; return
+1; 11; moški; ritem; eksperiment; 1; R_E1_tapping.wav; 1; 0; 114; space
+1; 11; moški; ritem; eksperiment; 1; R_E1_tapping.wav; 2; 684; 52; space
+1; 11; moški; ritem; eksperiment; 1; R_E1_tapping.wav; 3; 962; 56; space
+1; 11; moški; ritem; eksperiment; 1; R_E1_tapping.wav; 4; 1752; 60; space
+1; 11; moški; ritem; eksperiment; 1; R_E1_tapping.wav; 5; 2039; 52; space
+1; 11; moški; ritem; eksperiment; 1; R_E1_tapping.wav; 6; 2298; 44; space
+1; 11; moški; ritem; eksperiment; 1; R_E1_tapping.wav; 7; 2600; 40; space
+1; 11; moški; ritem; eksperiment; 1; R_E1_tapping.wav; 8; 2900; 44; space
+1; 11; moški; ritem; eksperiment; 1; R_E1_tapping.wav; 9; 3216; 48; space
+1; 11; moški; ritem; eksperiment; 1; R_E1_tapping.wav; 10; 5358; 88; return
+1; 11; moški; ritem; eksperiment; 2; R_M1_tapping.wav; 1; 0; 39; space
+1; 11; moški; ritem; eksperiment; 2; R_M1_tapping.wav; 2; 853; 32; space
+1; 11; moški; ritem; eksperiment; 2; R_M1_tapping.wav; 3; 1218; 32; space
+1; 11; moški; ritem; eksperiment; 2; R_M1_tapping.wav; 4; 1343; 56; space
+1; 11; moški; ritem; eksperiment; 2; R_M1_tapping.wav; 5; 1590; 44; space
+1; 11; moški; ritem; eksperiment; 2; R_M1_tapping.wav; 6; 1852; 32; space
+1; 11; moški; ritem; eksperiment; 2; R_M1_tapping.wav; 7; 2130; 36; space
+1; 11; moški; ritem; eksperiment; 2; R_M1_tapping.wav; 8; 2343; 52; space
+1; 11; moški; ritem; eksperiment; 2; R_M1_tapping.wav; 9; 2610; 44; space
+1; 11; moški; ritem; eksperiment; 2; R_M1_tapping.wav; 10; 2881; 45; space
+1; 11; moški; ritem; eksperiment; 2; R_M1_tapping.wav; 11; 3556; 44; space
+1; 11; moški; ritem; eksperiment; 2; R_M1_tapping.wav; 12; 5638; 88; return
+1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 1; 0; 47; space
+1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 2; 682; 52; space
+1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 3; 952; 60; space
+1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 4; 1293; 48; space
+1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 5; 1425; 60; space
+1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 6; 1724; 48; space
+1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 7; 1964; 60; space
+1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 8; 2198; 68; space
+1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 9; 2420; 64; space
+1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 10; 2666; 68; space
+1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 11; 2942; 76; space
+1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 12; 4634; 64; return
+1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 1; 0; 39; space
+1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 2; 405; 56; space
+1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 3; 876; 44; space
+1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 4; 1281; 44; space
+1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 5; 1834; 40; space
+1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 6; 2285; 44; space
+1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 7; 2791; 44; space
+1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 8; 3271; 40; space
+1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 9; 4539; 64; return
+1; 11; moški; tempo; eksperiment; 1; TE_MS2_tapping.wav; 1; 0; 47; space
+1; 11; moški; tempo; eksperiment; 1; TE_MS2_tapping.wav; 2; 554; 44; space
+1; 11; moški; tempo; eksperiment; 1; TE_MS2_tapping.wav; 3; 1104; 40; space
+1; 11; moški; tempo; eksperiment; 1; TE_MS2_tapping.wav; 4; 1607; 52; space
+1; 11; moški; tempo; eksperiment; 1; TE_MS2_tapping.wav; 5; 2175; 64; space
+1; 11; moški; tempo; eksperiment; 1; TE_MS2_tapping.wav; 6; 2754; 68; space
+1; 11; moški; tempo; eksperiment; 1; TE_MS2_tapping.wav; 7; 3336; 72; space
+1; 11; moški; tempo; eksperiment; 1; TE_MS2_tapping.wav; 8; 3846; 68; space
+1; 11; moški; tempo; eksperiment; 1; TE_MS2_tapping.wav; 9; 5288; 52; return
+1; 11; moški; tempo; eksperiment; 2; TE_E1_tapping.wav; 1; 0; 79; space
+1; 11; moški; tempo; eksperiment; 2; TE_E1_tapping.wav; 2; 520; 80; space
+1; 11; moški; tempo; eksperiment; 2; TE_E1_tapping.wav; 3; 1126; 76; space
+1; 11; moški; tempo; eksperiment; 2; TE_E1_tapping.wav; 4; 1665; 72; space
+1; 11; moški; tempo; eksperiment; 2; TE_E1_tapping.wav; 5; 2206; 80; space
+1; 11; moški; tempo; eksperiment; 2; TE_E1_tapping.wav; 6; 2720; 92; space
+1; 11; moški; tempo; eksperiment; 2; TE_E1_tapping.wav; 7; 3266; 88; space
+1; 11; moški; tempo; eksperiment; 2; TE_E1_tapping.wav; 8; 3765; 68; space
+1; 11; moški; tempo; eksperiment; 2; TE_E1_tapping.wav; 9; 5323; 92; return
+1; 11; moški; tempo; eksperiment; 3; TE_CS2_tapping.wav; 1; 0; 139; space
+1; 11; moški; tempo; eksperiment; 3; TE_CS2_tapping.wav; 2; 468; 128; space
+1; 11; moški; tempo; eksperiment; 3; TE_CS2_tapping.wav; 3; 928; 140; space
+1; 11; moški; tempo; eksperiment; 3; TE_CS2_tapping.wav; 4; 1476; 112; space
+1; 11; moški; tempo; eksperiment; 3; TE_CS2_tapping.wav; 5; 1982; 112; space
+1; 11; moški; tempo; eksperiment; 3; TE_CS2_tapping.wav; 6; 2499; 132; space
+1; 11; moški; tempo; eksperiment; 3; TE_CS2_tapping.wav; 7; 3022; 136; space
+1; 11; moški; tempo; eksperiment; 3; TE_CS2_tapping.wav; 8; 3511; 128; space
+1; 11; moški; tempo; eksperiment; 3; TE_CS2_tapping.wav; 9; 4600; NA; return
