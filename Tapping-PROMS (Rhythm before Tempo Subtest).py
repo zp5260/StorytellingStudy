@@ -68,6 +68,7 @@ def trials(triallist, phase, block):
                     kb.stop()
                 else:
                     instruction.text="Neveljavni tapki: Prosim, da še enkrat ponoviš zaporedje zvokov s preslednico (spacebar) po GLASNEM TONU!"
+                    beep.stop()
                     instruction.draw()
                     win.flip()
                     core.wait(1.5) 
@@ -75,6 +76,10 @@ def trials(triallist, phase, block):
                     instruction.draw()
                     win.flip()
                     kb.clearEvents(eventType='keyboard')
+
+                    beats = sound.Sound(os.path.join(trialpath, trial))
+                    beats.play()
+                    core.wait(beats.getDuration() + 0)  # intervall before beep: 0
                     beep.play()
         win.flip()                        
         begintime = keys[0].rt

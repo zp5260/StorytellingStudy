@@ -42,15 +42,15 @@ sbj; age; sex; block; phase; trialnr; sound; press order; accumulated RT; press 
 1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 10; 2666; 68; space
 1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 11; 2942; 76; space
 1; 11; moški; ritem; eksperiment; 3; R_MS2_tapping.wav; 12; 4634; 64; return
-1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 1; 0; 39; space
-1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 2; 405; 56; space
-1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 3; 876; 44; space
-1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 4; 1281; 44; space
-1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 5; 1834; 40; space
-1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 6; 2285; 44; space
-1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 7; 2791; 44; space
-1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 8; 3271; 40; space
-1; 11; moški; tempo; vaja;1; TE_exampleI_129bpm_tapping.wav; 9; 4539; 64; return
+1; 11; moški; tempo; vaja; 1; TE_exampleI_129bpm_tapping.wav; 1; 0; 39; space
+1; 11; moški; tempo; vaja; 1; TE_exampleI_129bpm_tapping.wav; 2; 405; 56; space
+1; 11; moški; tempo; vaja; 1; TE_exampleI_129bpm_tapping.wav; 3; 876; 44; space
+1; 11; moški; tempo; vaja; 1; TE_exampleI_129bpm_tapping.wav; 4; 1281; 44; space
+1; 11; moški; tempo; vaja; 1; TE_exampleI_129bpm_tapping.wav; 5; 1834; 40; space
+1; 11; moški; tempo; vaja; 1; TE_exampleI_129bpm_tapping.wav; 6; 2285; 44; space
+1; 11; moški; tempo; vaja; 1; TE_exampleI_129bpm_tapping.wav; 7; 2791; 44; space
+1; 11; moški; tempo; vaja; 1; TE_exampleI_129bpm_tapping.wav; 8; 3271; 40; space
+1; 11; moški; tempo; vaja; 1; TE_exampleI_129bpm_tapping.wav; 9; 4539; 64; return
 1; 11; moški; tempo; eksperiment; 1; TE_MS2_tapping.wav; 1; 0; 47; space
 1; 11; moški; tempo; eksperiment; 1; TE_MS2_tapping.wav; 2; 554; 44; space
 1; 11; moški; tempo; eksperiment; 1; TE_MS2_tapping.wav; 3; 1104; 40; space

@@ -1,5 +1,6 @@
 #$ paths of data
-datadirpythoncsv = r"{./logfiles/}"
+datadirpythoncsv_pre = r"{./pre_tests/}"
+datadirpythoncsv_post = r"{./post_tests/}"
 datadirInquisitxlsx = r"{./bla/}"
 datadirInquisitiqdat = r"{C:\Users\PJ\OneDrive - rwth-aachen.de\HIWI\Markus\example output\Inquisit\iqdat}"
 
@@ -137,7 +138,8 @@ analyze = function(allresults) {
         
         for (soundname in unique(selectedresults[["sound"]])) {
           onetrial =  selectedresults[selectedresults$sound == soundname,] # data for current sound
-          exclude = onetrial[["exclude"]]  %>% .[2:(length(.) - 1)] %>%  any()
+          ## exclude = onetrial[["exclude"]]  %>% .[2:(length(.) - 1)] %>%  any()
+          exclude = FALSE
           
           onetrialnorm = allnorms[[soundname]] # reference values for current sound
           
@@ -259,10 +261,10 @@ analyze = function(allresults) {
 }
 
 ##| analyze python csv
-if (dir.exists(datadirpythoncsv)) {
+if (dir.exists(datadirpythoncsv_pre)) {
   ###| read python csv
   files = list.files(
-    path = datadirpythoncsv,
+    path = datadirpythoncsv_pre,
     pattern = "*.csv",
     full.names = TRUE,
     recursive = FALSE
@@ -302,8 +304,56 @@ if (dir.exists(datadirpythoncsv)) {
   allresultspythoncsv = type_convert(allresultspythoncsv,
                                      col_types = vartypes)
   
-  outputpythoncsv = analyze(allresultspythoncsv)
-  View(outputpythoncsv)
+  outputpythoncsv_pre = analyze(allresultspythoncsv)
+  View(outputpythoncsv_pre)
+}
+
+##| analyze python csv
+if (dir.exists(datadorpythoncsv_post)) {
+  ###| read python csv
+  files = list.files(
+    path = datadirpythoncsv_post,
+    pattern = "*.csv",
+    full.names = TRUE,
+    recursive = FALSE
+  )
+  
+  if (length(files) > 0) {
+    allresultspythoncsv = vector("list", length(files))
+    
+    for (i in seq_along(files)) {
+      one = read_delim(
+        files[i],
+        delim = "; ",
+        col_names = TRUE,
+        trim_ws = TRUE,
+        col_types = cols(.default = col_character())
+      )
+      
+      allresultspythoncsv[[i]] = one
+    }
+    allresultspythoncsv = bind_rows(allresultspythoncsv)
+  }
+  ####| specify column name & data type
+  vartypes = cols(
+    sbj = col_factor(levels = NULL, ordered = FALSE),
+    age = col_integer(),
+    sex = col_factor(levels = NULL, ordered = FALSE),
+    block = col_factor(levels = NULL, ordered = FALSE),
+    phase = col_factor(levels = NULL, ordered = FALSE),
+    trialnr = col_integer(),
+    sound = col_factor(levels = NULL, ordered = FALSE),
+    'press order' = col_integer(),
+    'accumulated RT' = col_integer(),
+    'press duration' =  col_integer(),
+    'key name' = col_factor(levels = NULL, ordered = FALSE)
+  )
+  
+  allresultspythoncsv = type_convert(allresultspythoncsv,
+                                     col_types = vartypes)
+  
+  outputpythoncsv_post = analyze(allresultspythoncsv)
+  View(outputpythoncsv_post)
 }
 
 
