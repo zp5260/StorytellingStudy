@@ -42,7 +42,7 @@ def trials(triallist, phase, block):
     n = 1
 
     for trial in triallist:
-        beep = sound.Sound(value=500, secs=0.10, volume=0.1)
+        beep = sound.Sound(value=500, secs=0.10)
         beep.stop()
         if block == 'tempo':
             text = f'Tempo {n} od {ntrials}. Zdaj se bodo predvajale ponovitve naloge iz tempa:'+'\n'+f'Prosim ponovi slišan tempo po  PREDVAJANEM GLASNEM TONU.'+'\n'+f'Pritisni gumb "B/b" za začetek naloge iz tempa.'+'\n'+"8 tapkov s presledkom ali spacebarom."+'\n\n'+\
