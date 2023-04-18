@@ -130,3 +130,5 @@ dmypy.json
 
 # Jetbrains stuff
 .idea/
+/post_tests/
+/pre_tests/
