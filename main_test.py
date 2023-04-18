@@ -1,4 +1,7 @@
 from psychopy import prefs
+
+prefs.hardware['audioLib'] = ['pygame']
+
 from psychopy import sound
 from psychopy import visual, core, event, gui
 import os.path
