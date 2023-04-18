@@ -96,7 +96,7 @@ def trials(triallist, phase, block):
 
 
 oriprefs=prefs.hardware['audioLib']
-prefs.hardware['audioLib']=['pyo']
+prefs.hardware['audioLib']=['pygame']
 prefs.hardware['audioLib']=oriprefs
 rhythm_testing=["R_E1_tapping.wav", "R_M1_tapping.wav", "R_MS2_tapping.wav"]
 tempo_testing=["TE_MS2_tapping.wav", "TE_E1_tapping.wav", "TE_CS2_tapping.wav"]
