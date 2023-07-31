@@ -81,8 +81,8 @@ analyze = function(allresults) {
     }
   }
   
-  rhythmtemp = temp[temp$block == "ritem" & temp$skip != TRUE, ]
-  tempotemp = temp[temp$block == "tempo" & temp$skip != TRUE, ]
+  rhythmtemp = temp[temp$block == "ritem" , ]
+  tempotemp = temp[temp$block == "tempo" , ]
   
   for (soundname in unique(rhythmtemp[["sound"]])) {
     norm = allnorms[[soundname]]
@@ -123,8 +123,8 @@ analyze = function(allresults) {
   
   allresults %<>%
     left_join(temp, by = c("sbj", "sound", "press order")) %>%
-    mutate (exclude =  is.na(skip) |
-              is.na(outlier) | (skip == TRUE) | (outlier == TRUE))
+    mutate (exclude = (outlier == TRUE))
+  # lets try to ignore skip only and keep outlier only
   
   output = vector("list", length(unique(allresults[["sound"]])))
   i = 1
@@ -138,8 +138,8 @@ analyze = function(allresults) {
         
         for (soundname in unique(selectedresults[["sound"]])) {
           onetrial =  selectedresults[selectedresults$sound == soundname,] # data for current sound
-          ## exclude = onetrial[["exclude"]]  %>% .[2:(length(.) - 1)] %>%  any()
-          exclude = FALSE
+          exclude = onetrial[["exclude"]]  %>% .[2:(length(.) - 1)] %>%  any()
+          # exclude = FALSE
           
           onetrialnorm = allnorms[[soundname]] # reference values for current sound
           
@@ -309,7 +309,7 @@ if (dir.exists(datadirpythoncsv_pre)) {
 }
 
 ##| analyze python csv
-if (dir.exists(datadorpythoncsv_post)) {
+if (dir.exists(datadirpythoncsv_post)) {
   ###| read python csv
   files = list.files(
     path = datadirpythoncsv_post,
