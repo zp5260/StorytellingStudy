@@ -37,6 +37,8 @@ allnorms = list(
   "R_CS3_tapping.wav" = c(650, 260, 130, 390, 130, 260, 260, 650, 260, 130, 130),
   "R_E3_tapping.wav" = c(520, 260, 260, 520, 260, 260, 520, 520),
   "R_C3_tapping.wav" = c(390, 130, 260, 520, 260, 130, 390),
+  "R_C_tapping.wav" = c(650,260,130,390,130,260,260,650,260,130,130),
+
   "TE_exampleI_129bpm_tapping.wav" = rep(465, 7),
   "TE_exampleII_116bpm_tapping.wav" = rep(517, 7),
   "TE_exampleIII_121bpm_tapping.wav" = rep(495, 7),

@@ -6,6 +6,7 @@ This repository contains a fork of the Tapping PROMS
 - Anaconda or Miniconda
 - A pair of headphones
 
+- downloads: pip install psychopy, pyGame
 # Create a conda environment
 
 ```bash
@@ -16,6 +17,8 @@ conda env create -f environment.yml
 
 ```bash
 conda activate psychopy
+conda activate envEight
+
 python main_test.py
 ```
 

@@ -45,11 +45,11 @@ def trials(triallist, phase, block):
         beep = sound.Sound(value=500, secs=0.10)
         beep.stop()
         if block == 'tempo':
-            text = f'Tempo {n} od {ntrials}. Zdaj se bodo predvajale ponovitve naloge iz tempa:'+'\n'+f'Prosim ponovi slišan tempo po  PREDVAJANEM GLASNEM TONU.'+'\n'+f'Pritisni gumb "B/b" za začetek naloge iz tempa.'+'\n'+"8 tapkov s presledkom ali spacebarom."+'\n\n'+\
-               'Ko boš zaključil ponovitev naloge, pritisni gumb "ENTER" za nadaljevanje.'
+            text = f'Tempo {n} od {ntrials}. Zdaj se bodo predvajale ponovitve naloge iz tempa:'+'\n'+f'Prosim, ponovi slišan tempo po  PREDVAJANEM GLASNEM TONU.'+'\n'+f'Pritisni gumb "B/b" za začetek naloge iz tempa.'+'\n'+"8 tapkov s presledkom ali spacebarom."+'\n\n'+\
+               'Ko boš zaključil/a ponovitev naloge, pritisni gumb "ENTER" za nadaljevanje.'
         else:
-            text = f'Ritem {n} od {ntrials}. Zdaj se bodo predvajale ponoviteve naloge iz ritma:'+'\n'+f'Prosim ponovi slišan ritem po PREDVAJANEM GLASNEM TONU.'+'\n'+f'Pritisni gumb "B/b" za začetek naloge iz ritma.'+'\n'+'\n\n'+\
-               'Ko boš zaključil ponovitev naloge, pritisni gumb "ENTER" za nadaljevanje.'
+            text = f'Ritem {n} od {ntrials}. Zdaj se bodo predvajale ponovitve naloge iz ritma:'+'\n'+f'Prosim, ponovi slišan ritem po PREDVAJANEM GLASNEM TONU.'+'\n'+f'Pritisni gumb "B/b" za začetek naloge iz ritma.'+'\n'+'\n\n'+\
+               'Ko boš zaključil/a ponovitev naloge, pritisni gumb "ENTER" za nadaljevanje.'
         instruction = visual.TextStim(win, font='Arial', alignHoriz='center', alignVert='center', height=1, wrapWidth=30, color='black', text=text)
         instruction.draw()
         win.flip()
@@ -101,8 +101,8 @@ def trials(triallist, phase, block):
 oriprefs=prefs.hardware['audioLib']
 prefs.hardware['audioLib']=['pygame']
 prefs.hardware['audioLib']=oriprefs
-rhythm_testing=["R_E1_tapping.wav", "R_M1_tapping.wav", "R_MS2_tapping.wav"]
-tempo_testing=["TE_MS2_tapping.wav", "TE_E1_tapping.wav", "TE_CS2_tapping.wav"]
+rhythm_testing=["R_ES1_tapping.wav", "R_M1_tapping.wav", "R_C_tapping.wav"]
+tempo_testing=["TE_ES1_tapping.wav", "TE_MS2_tapping.wav", "TE_CS2_tapping.wav"]
 rhythm_training = ["R_exampleI_520260520260520130130520_tapping.wav"]
 tempo_training = ["TE_exampleI_129bpm_tapping.wav"]
 
@@ -111,11 +111,11 @@ event.globalKeys.add(key='q', modifiers=['ctrl'], func=f_quit, name='force quit 
 event.globalKeys.add(key='q', modifiers=['ctrl', 'capslock'], func=f_quit, name='force quit Q')
 
 texts = {
-    "instruction": "Zdravo \nV vsakem segmentu študije boš slišal/a zaporedje zvokov. Poskusi čimbolj natančno ponoviti slišane zvoke s klikanjem na gumb preslednico (spacebar).\n\n<Začni s klikom na preslednico (spacebar)>.",
-    "Rhythm training": "Začel/a boš z vajo iz ritma pred začetkom študije.\n\nČe imaš še kakšno vprašanja, ga lahko zastaviš zdaj. Po zaključku vaje, bo zopet čas za vprašanja.\n\n<Začni s klikom na preslednico (spacebar)>.",
-    "Tempo training": "Začel/a  boš z vajo iz tempa pred začetkom študije.\n\nČe imaš še kakšnp vprašanja, ga lahko zastaviš zdaj. Po zaključku vaje, bo zopet čas za vprašanja.\n\n<Začni s klikom na preslednico (spacebar)>.",
+    "instruction": "Zdravo! \nV vsakem segmentu študije boš slišal/a zaporedje zvokov. Poskusi čimbolj natančno ponoviti slišane zvoke s klikanjem na gumb preslednico (spacebar).\n\n<Začni s klikom na preslednico (spacebar)>.",
+    "Rhythm training": "Začel/a boš z vajo iz ritma pred začetkom študije.\n\nČe imaš še kakšno vprašanja, ga lahko zastaviš zdaj. Po zaključku vaje bo zopet čas za vprašanja.\n\n<Začni s klikom na preslednico (spacebar)>.",
+    "Tempo training": "Začel/a  boš z vajo iz tempa pred začetkom študije.\n\nČe imaš še kakšnp vprašanja, ga lahko zastaviš zdaj. Po zaključku vaje bo zopet čas za vprašanja.\n\n<Začni s klikom na preslednico (spacebar)>.",
     "trained": "Zaključil/a si naloge za vajo.\nAli imaš kakšno vprašanje?\n\nČe ne, pritisni na preslednico (spacebar) za začetek eksperimenta.",
-    "pause": "Bravo! Zaključil si prvi sklop nalog! Zdaj boš nadaljeval s sklopom nalog iz tempa. <Za nadaljevanje na pritisni preslednico (spacebar)."
+    "pause": "Bravo! Zaključil/a si prvi sklop nalog! Zdaj boš nadaljeval/a s sklopom nalog iz tempa.\n\nZa nadaljevanje na pritisni preslednico (spacebar)."
 }
 
 # texts = {
