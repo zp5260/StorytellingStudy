@@ -10,7 +10,7 @@ This repository contains a fork of the Tapping PROMS
 # Create a conda environment
 
 ```bash
-conda env create -f environment.yml 
+conda env create -f environment.yml   
 ```
 
 # Start the program
