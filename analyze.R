@@ -1,6 +1,6 @@
 #$ paths of data
-datadirpythoncsv_pre = r"{./pre_tests/}"
-datadirpythoncsv_post = r"{./post_tests/}"
+datadirpythoncsv_pre = r"{./proms/pre_tests/}"
+datadirpythoncsv_post = r"{./proms/post_tests/}"
 datadirInquisitxlsx = r"{./bla/}"
 datadirInquisitiqdat = r"{C:\Users\PJ\OneDrive - rwth-aachen.de\HIWI\Markus\example output\Inquisit\iqdat}"
 
@@ -271,10 +271,10 @@ if (dir.exists(datadirpythoncsv_pre)) {
     full.names = TRUE,
     recursive = FALSE
   )
-  
+
   if (length(files) > 0) {
     allresultspythoncsv = vector("list", length(files))
-    
+
     for (i in seq_along(files)) {
       one = read_delim(
         files[i],
@@ -283,7 +283,7 @@ if (dir.exists(datadirpythoncsv_pre)) {
         trim_ws = TRUE,
         col_types = cols(.default = col_character())
       )
-      
+
       allresultspythoncsv[[i]] = one
     }
     allresultspythoncsv = bind_rows(allresultspythoncsv)
@@ -302,10 +302,10 @@ if (dir.exists(datadirpythoncsv_pre)) {
     'press duration' =  col_integer(),
     'key name' = col_factor(levels = NULL, ordered = FALSE)
   )
-  
+
   allresultspythoncsv = type_convert(allresultspythoncsv,
                                      col_types = vartypes)
-  
+
   outputpythoncsv_pre = analyze(allresultspythoncsv)
   View(outputpythoncsv_pre)
 }

@@ -19,7 +19,7 @@ conda env create -f environment.yml
 conda activate psychopy
 conda activate envEight
 
-python main_test.py
+si
 ```
 
 # To force quit and restart 

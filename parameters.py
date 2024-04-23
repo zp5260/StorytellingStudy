@@ -38,7 +38,7 @@
 // intervals associated with rhythm1
 <list r1_intervals>
 / items = (780, 260, 520, 260, 260, 520, 260, 260)
-/ selectionmode = sequence
+/ selectionmode = sequencea
 </list>
 
 // intervals associated with rhythm2
