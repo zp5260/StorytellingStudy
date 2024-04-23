@@ -132,6 +132,6 @@ dmypy.json
 .idea/
 /post_tests/
 /pre_tests/
-/logfiles/
+#/logfiles/
 /temp_pre/
 /temp_post/
