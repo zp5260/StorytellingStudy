@@ -7,8 +7,8 @@ warnings.filterwarnings("ignore")
 include_vaja = False
 
 # Read csv file into DataFrame
-df_pre_proms = pandas.read_csv('./testi/pre.csv')
-df_post_proms = pandas.read_csv('./testi/post.csv')
+df_pre_proms = pandas.read_csv('./analiza/vsi_pre.csv')
+df_post_proms = pandas.read_csv('./analiza/vsi_post.csv')
 
 
 # Compute the Student's t-test for the means of pre and post PROMs
@@ -38,23 +38,21 @@ df_rhythm_post = df_rhythm_post[~df_rhythm_post['sbj'].isin(outlier_users)]
 
 print(len(df_rhythm_pre['sbj'].unique()))
 
-# Filter out the rows which have NaN value as AbsoluteAsynchrony in either dataframes
-# df_abs_rhythm_pre = df_rhythm_pre[df_rhythm_pre['AbsoluteAsynchrony'].notnull() & df_rhythm_post['AbsoluteAsynchrony'].notnull()]
-# df_abs_rhythm_post = df_rhythm_post[df_rhythm_pre['AbsoluteAsynchrony'].notnull() & df_rhythm_post['AbsoluteAsynchrony'].notnull()]
+#Filter out the rows which have NaN value as AbsoluteAsynchrony in either dataframes
+df_abs_rhythm_pre = df_rhythm_pre[df_rhythm_pre['AbsoluteAsynchrony'].notnull() & df_rhythm_post['AbsoluteAsynchrony'].notnull()]
+df_abs_rhythm_post = df_rhythm_post[df_rhythm_pre['AbsoluteAsynchrony'].notnull() & df_rhythm_post['AbsoluteAsynchrony'].notnull()]
 
-# Filter out the rows which have NaN value as RelativeAsynchrony in either dataframes
-# df_rel_rhythm_pre = df_rhythm_pre[df_rhythm_pre['RelativeAsynchrony'].notnull() & df_rhythm_post['RelativeAsynchrony'].notnull()]
-# df_rel_rhythm_post = df_rhythm_post[df_rhythm_pre['RelativeAsynchrony'].notnull() & df_rhythm_post['RelativeAsynchrony'].notnull()]
-
-# Perform for each sound column separately
-for sound in df_rhythm_pre['sound'].unique():
-    df_abs_rhythm_pre_sound = df_rhythm_pre[df_rhythm_pre['sound'] == sound]
-    df_abs_rhythm_post_sound = df_rhythm_post[df_rhythm_post['sound'] == sound]
+# For each sound column separately
+for sound in df_abs_rhythm_pre['sound'].unique():
+    df_abs_rhythm_pre_sound = df_abs_rhythm_pre[df_abs_rhythm_pre['sound'] == sound]
+    df_abs_rhythm_post_sound = df_abs_rhythm_post[df_rhythm_post['sound'] == sound]
 
     if df_abs_rhythm_post_sound.shape[0] != df_abs_rhythm_pre_sound.shape[0]:
         continue
     print(f"\n===== {sound}")
 
+    print(df_abs_rhythm_pre_sound, df_abs_rhythm_post_sound)
+    print("*********")
     # Print Mean, Standard Deviation, Pearson Correlation Coefficient and p-value
     print(f'Mean {df_abs_rhythm_pre_sound["AbsoluteAsynchrony"].mean()} {df_abs_rhythm_post_sound["AbsoluteAsynchrony"].mean()}')
     print(f'Standard Deviation {df_abs_rhythm_pre_sound["AbsoluteAsynchrony"].std()} {df_abs_rhythm_post_sound["AbsoluteAsynchrony"].std()}')
@@ -62,24 +60,15 @@ for sound in df_rhythm_pre['sound'].unique():
     print(f'p-value {stats.ttest_rel(df_abs_rhythm_pre_sound["AbsoluteAsynchrony"], df_abs_rhythm_post_sound["AbsoluteAsynchrony"], alternative="greater")}')
     print('-----------------------------------------------------')
 
-    df_rel_rhythm_pre_sound = df_rhythm_pre[df_rhythm_pre['sound'] == sound]
-    df_rel_rhythm_post_sound = df_rhythm_post[df_rhythm_post['sound'] == sound]
-
-    if df_rel_rhythm_post_sound.shape[0] != df_rel_rhythm_pre_sound.shape[0]:
-        continue
-
-
-    print('RelativeAsynchrony')
-
-    # Print Mean, Standard Deviation, Pearson Correlation Coefficient and p-value
-    print(f'Mean {df_rel_rhythm_pre_sound["RelativeAsynchrony"].mean()} {df_rel_rhythm_post_sound["RelativeAsynchrony"].mean()}')
-    print(f'Standard Deviation {df_rel_rhythm_pre_sound["RelativeAsynchrony"].std()} {df_rel_rhythm_post_sound["RelativeAsynchrony"].std()}')
-    print(f'Pearson Correlation Coefficient {df_rel_rhythm_pre_sound["RelativeAsynchrony"].corr(df_rel_rhythm_post_sound["RelativeAsynchrony"])}')
-    print(f'p-value {stats.ttest_rel(df_rel_rhythm_pre_sound["RelativeAsynchrony"], df_rel_rhythm_post_sound["RelativeAsynchrony"], alternative="greater")}')
 
 print('-----------------------------------------------------')
 print('')
 print('Tempo (only for Asynchrony)')
+
+
+
+
+
 
 df_tempo_pre = df_pre_proms.query('block == "tempo" & (phase != "vaja" & phase != "vaje")')
 df_tempo_post = df_post_proms.query('block == "tempo" & (phase != "vaja" & phase != "vaje")')

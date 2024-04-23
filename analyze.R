@@ -1,6 +1,6 @@
 #$ paths of data
-datadirpythoncsv_pre = r"{./proms/pre_tests/}"
-datadirpythoncsv_post = r"{./proms/post_tests/}"
+datadirpythoncsv_pre = r"{./testi/pre/nostory/}"
+datadirpythoncsv_post = r"{./testi/post/nostory/}"
 datadirInquisitxlsx = r"{./bla/}"
 datadirInquisitiqdat = r"{C:\Users\PJ\OneDrive - rwth-aachen.de\HIWI\Markus\example output\Inquisit\iqdat}"
 

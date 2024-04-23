@@ -1,0 +1,60 @@
+Student's t-test for the means of pre and post PROMs
+separate by sound column representing the task
+-----------------------------------------------------
+Rhythm
+AbsoluteAsynchrony
+11
+
+===== R_ES1_tapping.wav
+*********
+Mean 0.43261872056514916 0.15376766091051802
+Standard Deviation 0.5173883918926483 0.09357339586732802
+Pearson Correlation Coefficient -0.33220186784406
+p-value TtestResult(statistic=1.3280492762172011, pvalue=0.116222744934738, df=6)
+-----------------------------------------------------
+RelativeAsynchrony
+Mean 0.29837338605396097 0.07868068142473324
+Standard Deviation 0.308236093109698 0.026776325338676837
+Pearson Correlation Coefficient 0.17952648442072036
+p-value TtestResult(statistic=1.9084340826111923, pvalue=0.05246775316546031, df=6)
+
+===== R_M1_tapping.wav
+*********
+Mean 1.25238603988604 1.171415004748338
+Standard Deviation 0.7172458272248473 0.588516691197408
+Pearson Correlation Coefficient 0.951383924081045
+p-value TtestResult(statistic=0.826307004538006, pvalue=0.2231270939392323, df=5)
+-----------------------------------------------------
+RelativeAsynchrony
+Mean 0.9591692495921335 0.8858013112828013
+Standard Deviation 1.1334984070794394 0.9655784065017596
+Pearson Correlation Coefficient 0.9979048213445675
+p-value TtestResult(statistic=0.992555896801491, pvalue=0.1832501446329819, df=5)
+
+===== R_C_tapping.wav
+*********
+Mean 4.043627199011814 4.244827764827765
+Standard Deviation 1.1557968007924386 0.8214971263989381
+Pearson Correlation Coefficient 0.26787765628840465
+p-value TtestResult(statistic=-0.4925051121183121, pvalue=0.6822033383205026, df=8)
+-----------------------------------------------------
+RelativeAsynchrony
+Mean 2.517233667848547 2.8990209770117463
+Standard Deviation 1.2695847495649408 1.510573906593487
+Pearson Correlation Coefficient 0.09437859637717123
+p-value TtestResult(statistic=-0.6094696202565228, pvalue=0.7204396371432253, df=8)
+-----------------------------------------------------
+
+Tempo (only for Asynchrony)
+===== TE_ES1_tapping.wav
+Mean 0.05363833563399718 0.05344113587063692
+Standard Deviation 0.023243241140000613 0.025984717903750842
+Pearson Correlation Coefficient -0.15703210205197735
+p-value TtestResult(statistic=0.01744789767412427, pvalue=0.49321125562452484, df=10)
+-----------------------------------------------------
+===== TE_MS2_tapping.wav
+Mean 0.07467532467532462 0.0614508790529198
+Standard Deviation 0.06380530774364765 0.03002079063079908
+Pearson Correlation Coefficient 0.33636136124566457
+p-value TtestResult(statistic=0.7226488363857738, pvalue=0.24322623112908126, df=10)
+-----------------------------------------------------

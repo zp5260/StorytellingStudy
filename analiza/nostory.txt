@@ -1,0 +1,52 @@
+===== R_ES1_tapping.wav
+*********
+Mean 0.32441620879120875 0.152918956043956
+Standard Deviation 0.17907196107912998 0.09602895426837554
+Pearson Correlation Coefficient 0.04369495527132459
+p-value TtestResult(statistic=2.43186471200644, pvalue=0.022648209939684808, df=7)
+-----------------------------------------------------
+RelativeAsynchrony
+Mean 0.21807382219544053 0.09490017742662402
+Standard Deviation 0.04866031592535266 0.03520207335715262
+Pearson Correlation Coefficient 0.7607993584432771
+p-value TtestResult(statistic=11.013688123019561, pvalue=5.641161200193168e-06, df=7)
+
+===== R_M1_tapping.wav
+*********
+Mean 1.0089387464387463 0.46559829059829066
+Standard Deviation 0.8797957751092662 0.2239284885566659
+Pearson Correlation Coefficient 0.3398765277931108
+p-value TtestResult(statistic=1.6019154112263563, pvalue=0.0850375225213906, df=5)
+-----------------------------------------------------
+RelativeAsynchrony
+Mean 0.8674134143958442 0.3011972839464329
+Standard Deviation 0.9544104029477959 0.14533423634481402
+Pearson Correlation Coefficient 0.5519510239832414
+p-value TtestResult(statistic=1.5715088417378966, pvalue=0.08843366950817755, df=5)
+
+===== R_C_tapping.wav
+*********
+Mean 2.922975749968757 2.8459530620894253
+Standard Deviation 1.8499466287732251 1.2717764190693124
+Pearson Correlation Coefficient 0.5892286265398652
+p-value TtestResult(statistic=0.169658600597779, pvalue=0.43433083987209004, df=10)
+-----------------------------------------------------
+RelativeAsynchrony
+Mean 1.9603574269462607 1.3978494466663711
+Standard Deviation 1.4267566111604846 1.3638038472768286
+Pearson Correlation Coefficient 0.6808569980865858
+p-value TtestResult(statistic=1.6713779822012989, pvalue=0.0627991596108684, df=10)
+-----------------------------------------------------
+
+Tempo (only for Asynchrony)
+===== TE_ES1_tapping.wav
+Mean 0.051941550856952116 0.05041596147886814
+Standard Deviation 0.016672742651194856 0.018107040398792074
+Pearson Correlation Coefficient 0.1550007072344166
+p-value TtestResult(statistic=0.24303291236187358, pvalue=0.4060422388015007, df=12)
+-----------------------------------------------------
+===== TE_MS2_tapping.wav
+Mean 0.07583645703179227 0.060582396223795576
+Standard Deviation 0.053928102568481524 0.030509076087260747
+Pearson Correlation Coefficient 0.4967880075815944
+p-value TtestResult(statistic=1.215661019499053, pvalue=0.12286481258613081, df=13)
