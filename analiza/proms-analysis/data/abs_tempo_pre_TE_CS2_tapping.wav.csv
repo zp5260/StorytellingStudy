@@ -1,0 +1,25 @@
+Unnamed: 0,sbj,age,sex,block,phase,trialnr,sound,exclude,AbsoluteAsynchrony,RelativeAsynchrony,AbsoluteCorrectness,RelativeCorrectness,Asynchrony
+16,Aljaz,24,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0566233766233766
+24,Anej,20,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0664935064935065
+32,Gasper,24,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0805194805194805
+40,Gloria,21,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0407792207792207
+48,Jan,26,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0241558441558441
+56,Jernej,23,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0755844155844155
+64,Jurij,17,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0792207792207792
+72,Klara,21,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0566233766233766
+80,Lucija,22,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0485714285714285
+88,MajaJ,21,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0779220779220779
+96,MajaL,21,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0846753246753246
+104,Mark,20,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0654545454545454
+112,Masa,21,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.04
+120,Mirkala,21,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.1063636363636363
+128,Mitja,26,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0768831168831168
+136,Natalija,22,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0672727272727272
+152,Okti,24,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0574025974025974
+160,Prosky,23,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0890909090909091
+168,Rene,21,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0249350649350649
+176,Sarah,21,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0446753246753246
+184,Taja,22,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.1394805194805194
+192,Teja,21,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.02
+200,Tilen,20,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0464935064935064
+208,Ziga,17,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0724675324675324

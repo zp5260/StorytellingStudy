@@ -1,0 +1,10 @@
+Unnamed: 0,sbj,age,sex,block,phase,trialnr,sound,exclude,AbsoluteAsynchrony,RelativeAsynchrony,AbsoluteCorrectness,RelativeCorrectness,Asynchrony
+16,Aljaz,24,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0748051948051948
+24,Anej,20,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0561038961038961
+64,Jurij,17,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0758441558441558
+72,Klara,21,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0428571428571428
+96,MajaL,21,ženski,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0485714285714285
+104,Mark,20,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0361038961038961
+128,Mitja,26,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0589610389610389
+168,Rene,21,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0358441558441558
+208,Ziga,17,moški,tempo,eksperiment,3,TE_CS2_tapping.wav,0.0,,,,,0.0828571428571428

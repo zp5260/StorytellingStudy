@@ -1,0 +1,4 @@
+user_id,starttime,finishtime,playtime,start_level,finish_level,name
+0ed2fdf848570ddf04cd3dfd2920cc3d-3,2024-03-28 14:47:11.940377+00:00,2024-03-28 14:48:09.962464+00:00,58.022087,1,1,
+0ed2fdf848570ddf04cd3dfd2920cc3d-3,2024-03-28 14:51:39.160139+00:00,2024-03-28 14:53:03.373327+00:00,84.213188,1,2,
+Total,,,142.235275,,,Story_TEST_games.csv
