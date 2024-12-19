@@ -1,0 +1,2 @@
+user_id, session_id, name, wasSkipped, start, end
+1ca3fadde4a210fdaa838a85c7469580-3,2d2445ab-ff3b-4fb2-89aa-75b0b0e73351, Golem, True, 2024-03-30T20:14:42.5108500+01:00, 2024-03-30T20:14:45.1210810+01:00

@@ -1,0 +1,45 @@
+-----------------------------------------------------
+Rhythm
+AbsoluteAsynchrony
+14
+*********
+Mean 2.1038779311856235 1.2566496822266053
+Standard Deviation 1.2782069413111214 0.8673180214975268
+Pearson Correlation Coefficient 0.5431047505670659
+p-value TtestResult(statistic=2.8098781113532234, pvalue=0.007876486550909402, df=12)
+-----------------------------------------------------
+*********
+Mean 3.8095560635945254 3.9040015540015545
+Standard Deviation 1.6478061787836389 1.0296295163129383
+Pearson Correlation Coefficient 0.5335875192429708
+p-value TtestResult(statistic=-0.23340628923606446, pvalue=0.5901337220528577, df=11)
+-----------------------------------------------------
+*********
+Mean 0.46135912698412695 0.1676434676434676
+Standard Deviation 0.4345824366357167 0.1282252649675194
+Pearson Correlation Coefficient -0.3054632603732104
+p-value TtestResult(statistic=1.8010850460275776, pvalue=0.05468573518575381, df=8)
+-----------------------------------------------------
+-----------------------------------------------------
+
+Tempo (only for Asynchrony)
+===== TE_ES1_tapping.wav
+Mean 0.057590999022669245 0.04197754523134129
+Standard Deviation 0.022205271001671495 0.01575831988221678
+Pearson Correlation Coefficient 0.05451889827138874
+p-value TtestResult(statistic=2.122841179582208, pvalue=0.027627418918622672, df=12)
+-----------------------------------------------------
+===== TE_MS2_tapping.wav
+Mean 0.06490351242537826 0.062061814521727
+Standard Deviation 0.036532851294541126 0.03213600543128443
+Pearson Correlation Coefficient 0.692305362795657
+p-value TtestResult(statistic=0.39038681398551217, pvalue=0.3512861663938004, df=13)
+-----------------------------------------------------
+===== TE_CS2_tapping.wav
+Mean 0.0673326673326673 0.061978021978021935
+Standard Deviation 0.028516506410611764 0.031102298843124442
+Pearson Correlation Coefficient 0.3874170356888491
+p-value TtestResult(statistic=0.5838865409315921, pvalue=0.2850548011046097, df=12)
+-----------------------------------------------------
+
+

@@ -1,0 +1,61 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Priprava podatkov
+data = {
+    'Name': [
+        'Story_TEST_games.csv', 'No_Taja_93e_games.csv', 'Story_Natalija_580_games.csv',
+        'Story_Tajda_c3d_games.csv', 'No_Ajda_862_games.csv', 'Story_MajaJ_c96_games.csv',
+        'Story_Prosky_games.csv', 'Story_Lucija_7e8_games.csv', 'Story_Zoja_7d6_games.csv',
+        'Story_NinaU_602_games.csv', 'No_Masa_b14_games.csv', 'No_Rene_fbc_games.csv',
+        'Story_NinaP_games.csv', 'No_Mark_games.csv', 'Story_Klara_4ca_games.csv',
+        'No_MajaL_feb_games.csv', 'No_Ziga_games.csv', 'Story_Anej_games.csv',
+        'Story_Jurij_games.csv', 'No_Aljaz_games.csv', 'No_Mitja_games.csv',
+        'No_Mirkala_8be_games.csv', 'No_Sarah_717_games.csv', 'No_Jernej_848_games.csv',
+        'Story_NinaKa_2ea_games.csv', 'Story_Tilen_games.csv', 'No_Okti_games.csv',
+        'Story_Jan_games.csv', 'Story_Tej_a_49d_games.csv', 'No_Gasper_games.csv',
+        'No_Gloria_f97_games.csv'
+    ],
+    'Seconds': [
+        142, 685, 778, 1312, 2413, 2713, 2770, 2886, 3239, 3804, 3945, 4910, 4976, 5041, 5264,
+        5664, 6667, 7743, 8521, 8758, 8885, 9033, 9118, 9471, 9699, 10073, 11125, 12611, 13653,
+        25094, 31608
+    ]
+}
+
+# Ustvarjanje DataFrame-a
+df = pd.DataFrame(data)
+
+# Dodajanje stolpca za vrsto igre
+df['Type'] = df['Name'].apply(lambda x: 'Story' if 'Story' in x else 'No Story')
+
+# Delitev podatkov glede na vrsto igre
+story_data = df[df['Type'] == 'Story']
+no_story_data = df[df['Type'] == 'No Story']
+
+# Ustvarjanje grafa
+plt.figure(figsize=(12, 8))
+
+# Dodajanje stolpcev za igre s Story
+plt.barh(story_data['Name'], story_data['Seconds'], color='blue', label='Story', align='center')
+
+# Dodajanje stolpcev za igre brez Story (negativne vrednosti za prikaz pod x-oso)
+plt.barh(no_story_data['Name'], -no_story_data['Seconds'], color='red', label='No Story', align='center')
+
+# Dodajanje oznak in legende
+plt.xlabel('Sekunde')
+plt.ylabel('Igre')
+plt.title('Primerjava časa igranja')
+plt.legend()
+
+# Rotacija oznak na y-osi za boljšo berljivost
+plt.yticks(rotation=45, ha='right')
+
+# Prikaz grafa
+plt.tight_layout()
+
+
+
+# Prikaz grafa
+plt.show()
+

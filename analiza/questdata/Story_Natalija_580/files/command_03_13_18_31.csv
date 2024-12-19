@@ -1,0 +1,5 @@
+user_id, session_id, command_name, note_timings
+1ca3fadde4a210fdaa838a85c7469580-3,99bc2be1-2b27-466e-8a78-0e8a9b574ada,Attack,System.Single[]
+1ca3fadde4a210fdaa838a85c7469580-3,99bc2be1-2b27-466e-8a78-0e8a9b574ada,Cavalry,System.Single[]
+1ca3fadde4a210fdaa838a85c7469580-3,99bc2be1-2b27-466e-8a78-0e8a9b574ada,Retreat,System.Single[]
+1ca3fadde4a210fdaa838a85c7469580-3,99bc2be1-2b27-466e-8a78-0e8a9b574ada,Attack,System.Single[]

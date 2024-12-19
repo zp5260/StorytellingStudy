@@ -1,0 +1,90 @@
+AbsoluteAsynchrony
+12
+*********
+Mean 1.7351574865463755 1.86644903450459
+Standard Deviation 1.2282316986633142 2.5584433890121794
+Pearson Correlation Coefficient 0.7545948451641076
+p-value TtestResult(statistic=-0.2164353388917376, pvalue=0.5829672512431558, df=8)
+-----------------------------------------------------
+*********
+Mean 3.0589679636602716 2.5874966977466975
+Standard Deviation 1.3643967282958764 1.1090649904101262
+Pearson Correlation Coefficient 0.24027940517308405
+p-value TtestResult(statistic=0.9696007423475732, pvalue=0.17878967254626782, df=9)
+-----------------------------------------------------
+*********
+Mean 0.32534340659340655 0.1682005494505494
+Standard Deviation 0.23290457967050324 0.09111248603906616
+Pearson Correlation Coefficient 0.3377515627320604
+p-value TtestResult(statistic=2.0242507034888404, pvalue=0.04130530524483961, df=7)
+-----------------------------------------------------
+-----------------------------------------------------
+
+Tempo (only for Asynchrony)
+===== TE_ES1_tapping.wav
+Mean 0.04786319970701745 0.06197706848466062
+Standard Deviation 0.017073733921267854 0.022342711698741576
+Pearson Correlation Coefficient 0.04840798025522436
+p-value TtestResult(statistic=-1.7049872704153353, pvalue=0.940493925679416, df=10)
+-----------------------------------------------------
+===== TE_MS2_tapping.wav
+Mean 0.08954891480401679 0.059564301911240625
+Standard Deviation 0.07251425042944896 0.026378138200449618
+Pearson Correlation Coefficient 0.32602200052374286
+p-value TtestResult(statistic=1.513985224727841, pvalue=0.07911030075831968, df=11)
+-----------------------------------------------------
+===== TE_CS2_tapping.wav
+Mean 0.05905844155844151 0.0507359307359307
+Standard Deviation 0.025489767032487565 0.015775815349417723
+Pearson Correlation Coefficient 0.30591796114203845
+p-value TtestResult(statistic=1.128575926138997, pvalue=0.14154472309202126, df=11)
+-----------------------------------------------------
+
+-----------------------------------------------------
+
+
+// BREZ EDGE CASE-OU
+
+-----------------------------------------------------
+Rhythm
+AbsoluteAsynchrony
+9
+*********
+Mean 1.4682641432641432 0.8775030525030526
+Standard Deviation 1.0259423811862363 0.6509209515935779
+Pearson Correlation Coefficient 0.6205910294875766
+p-value TtestResult(statistic=1.942582562955293, pvalue=0.050041451982429756, df=6)
+-----------------------------------------------------
+*********
+Mean 3.314615128461283 2.7190645465645464
+Standard Deviation 1.5879576270032565 1.2329158461906695
+Pearson Correlation Coefficient 0.1787145079946517
+p-value TtestResult(statistic=0.8619266414611486, pvalue=0.2109172135126731, df=6)
+-----------------------------------------------------
+*********
+Mean 0.33548534798534796 0.15668498168498163
+Standard Deviation 0.27429573104567057 0.07830097668435733
+Pearson Correlation Coefficient 0.4462275294348304
+p-value TtestResult(statistic=1.7560789185760202, pvalue=0.06971297501960318, df=5)
+-----------------------------------------------------
+-----------------------------------------------------
+
+Tempo (only for Asynchrony)
+===== TE_ES1_tapping.wav
+Mean 0.050098130358433995 0.0605653685913989
+Standard Deviation 0.017738736749396276 0.02471134566143903
+Pearson Correlation Coefficient 0.10716176058147804
+p-value TtestResult(statistic=-1.08907420609639, pvalue=0.8460813173633983, df=8)
+-----------------------------------------------------
+===== TE_MS2_tapping.wav
+Mean 0.09888241010689985 0.06300615484288946
+Standard Deviation 0.07987656886336941 0.02820180688503276
+Pearson Correlation Coefficient 0.2193954111953288
+p-value TtestResult(statistic=1.368304276642209, pvalue=0.1042042091710824, df=8)
+-----------------------------------------------------
+===== TE_CS2_tapping.wav
+Mean 0.05786435786435781 0.05165945165945162
+Standard Deviation 0.021434386372676473 0.0182269590118439
+Pearson Correlation Coefficient 0.40759529694487234
+p-value TtestResult(statistic=0.8557489292717213, pvalue=0.20851449622476065, df=8)
+-----------------------------------------------------

@@ -1,0 +1,90 @@
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+# Preberi podatke iz CSV datoteke
+df = pd.read_csv('final_no_story.csv')
+
+# Sortiraj DataFrame po Odgovor na glasbo in Odgovor na videoigre
+df = df.sort_values(by=['Odgovor na glasbo', 'Odgovor na videoigre'], ascending=[True, True])
+
+# Shrani DataFrame v CSV datoteko
+df.to_csv('final_no_story.csv', index=False)
+
+# Priprava barvne lestvice glede na frekvence
+norm = plt.Normalize(df['Frequency'].min(), df['Frequency'].max())
+cmap = sns.color_palette("Reds", as_cmap=True)
+
+# Ustvarimo stolpčni graf z manjšimi dimenzijami
+fig, ax = plt.subplots(figsize=(8, 6))  # Prilagodil sem velikost
+
+bar_width = 0.9  # Širina stolpcev
+position = 0.5  # Začetna pozicija za prvi stolpec
+person_positions = {}
+
+# Prikazujemo podatke za skupino kot akumulativne stolpce
+for person in df['Person'].unique():
+    person_data = df[df['Person'] == person]
+    start_pos = position
+    for start_level in [1, 6, 11, 16]:
+        cumulative_frequency = np.zeros(22)  # Ustvari niz za akumulativno frekvenco do nivoja 21
+        for _, row in person_data[person_data['Start'] == start_level].iterrows():
+            end_level = row['End']
+            frequency = row['Frequency']
+            # Dodajanje frekvenc kumulativnemu nizu
+            for level in range(start_level, end_level + 1):
+                cumulative_frequency[level] += frequency
+        # Risanje delov stolpcev z akumulirano frekvenco
+        for level in range(start_level, 22):
+            if cumulative_frequency[level] > 0:
+                # Barva za določen nivo
+                color = cmap(norm(cumulative_frequency[level]))
+                # Risanje nivoja kot posamezno vrstico
+                if level == 21:
+                    # Če je nivo 21, pobarvamo še višino za en nivo nad 21. črtico
+                    ax.bar(position, 1, bottom=level, width=bar_width, color=color, edgecolor='black')
+                else:
+                    ax.bar(position, 1, bottom=level, width=bar_width, color=color, edgecolor='black')
+        position += 1
+        # Dodajanje sivih črtkanih črt samo na levi strani vsakega stolpca, ki se začne iz nivoja ena in se razteza do vrha grafa
+        if start_level == 1:
+            ax.axvline(x=position - 1.5, ymin=0, ymax=1, color='gray', linestyle='--', linewidth=0.5)
+    person_positions[person] = (start_pos, position - 1)
+    position += 0.5  # Manjši razmik med različnimi igralci
+
+# Odstranitev oznak na x-osi
+ax.set_xticks([])
+ax.set_xticklabels([])
+
+# Dodamo oznake in legendo
+ax.set_xlabel('Glasbena izobrazba in čas igranja videoiger')
+ax.set_ylabel('Nivo')
+ax.set_title('Začetni in končni nivo igranja za skupino')
+ax.grid(True, axis='y')
+
+# Nastavimo y-os tako, da začne pri 1
+ax.set_ylim(1, 22)  # Nastavite meje glede na vaše podatke
+
+# Dodamo glavne in pomožne oznake y-osi
+ax.set_yticks([1, 6, 11, 16, 21])
+ax.set_yticks(np.arange(1, 23), minor=True)
+
+# Dodamo puščice in oznake za igralce
+for person, (start_pos, end_pos) in person_positions.items():
+    ax.annotate('', xy=(start_pos, 0.5), xytext=(end_pos, 0.5), arrowprops=dict(arrowstyle='|-|', color='black'))
+    answer_music = df[df['Person'] == person]['Odgovor na glasbo'].iloc[0]
+    icon = '✔' if answer_music else '✘'
+    ax.text((start_pos + end_pos) / 2, 0, icon, ha='center', va='center', fontsize=10, bbox=dict(boxstyle="round,pad=0.3", edgecolor='black', facecolor='white'))
+
+plt.tight_layout()
+
+# Dodamo barvno lestvico
+sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
+sm.set_array([])
+cbar = fig.colorbar(sm, ax=ax)
+cbar.set_label('Frekvenca')
+
+plt.savefig('graf.png', bbox_inches='tight')  # Shrani graf kot sliko 'graf.png' z ustreznimi mejami
+plt.show()

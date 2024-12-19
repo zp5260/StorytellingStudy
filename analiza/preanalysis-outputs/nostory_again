@@ -1,0 +1,40 @@
+Rhythm
+AbsoluteAsynchrony
+15
+['Ajda' 'Aljaz' 'Gasper' 'Gloria' 'Jernej' 'MajaL' 'Mark' 'Masa' 'Mirkala'
+ 'Mitja' 'Okti' 'Rene' 'Sarah' 'Taja' 'Ziga']
+*********
+Mean 2.0745385632885633 1.6368956043956044
+Standard Deviation 1.2634763772387727 2.1186826448750025
+Pearson Correlation Coefficient 0.5338263041310741
+p-value TtestResult(statistic=0.911532435193335, pvalue=0.18930393416968644, df=13)
+-----------------------------------------------------
+RelativeAsynchrony
+Mean 1.4227923048899032 0.9535784518670657
+Standard Deviation 0.988343048192273 0.972184431407437
+Pearson Correlation Coefficient 0.3494883585499492
+p-value TtestResult(statistic=1.5700691214358289, pvalue=0.07020537354479536, df=13)
+*********
+Mean 2.7956076635097613 2.7426663488027123
+Standard Deviation 1.6888823970976368 1.0690492179252196
+Pearson Correlation Coefficient 0.5423313535136552
+p-value TtestResult(statistic=0.12303065402992881, pvalue=0.452260197057072, df=10)
+-----------------------------------------------------
+RelativeAsynchrony
+Mean 1.6371197072169876 1.2369970897676035
+Standard Deviation 1.1901531388599291 1.1000904396565314
+Pearson Correlation Coefficient 0.8639240700949572
+p-value TtestResult(statistic=2.198267144456307, pvalue=0.026297546543452836, df=10)
+-----------------------------------------------------
+===== TE_MS2_tapping.wav
+Mean 0.07745383867832843 0.06051182377712984
+Standard Deviation 0.05234259882071783 0.02940055187385995
+Pearson Correlation Coefficient 0.4920837757831037
+p-value TtestResult(statistic=1.435419220869802, pvalue=0.08656589406339739, df=14)
+-----------------------------------------------------
+===== TE_CS2_tapping.wav
+Mean 0.06721212121212115 0.05529004329004326
+Standard Deviation 0.02926905378136366 0.01826112221634557
+Pearson Correlation Coefficient 0.13660636813008864
+p-value TtestResult(statistic=1.4289691108719356, pvalue=0.08747243477361946, df=14)
+-----------------------------------------------------
